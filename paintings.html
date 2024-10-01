@@ -36,7 +36,7 @@
             max-height: 3000px;
             margin: 20px auto;
             padding: 20px;
-            background: #305300;
+            background: #9e5ca5;
         }
         .textblock {
             max-width: 800px;
@@ -47,6 +47,9 @@
             font-weight: 200;
             text-align: 200;
             display:block;
+        }
+        .dippy {
+            display:inline-block
         }
         h1, h2 {
             color: #333;
@@ -79,13 +82,16 @@
 </div>
 
 <div class="container">
-    <a href="diptych2.jpg" data-lightbox="diptych" data-title="My caption">
-        <img src="diptych2.jpg" alt="diptych2" width="350" style="float: left;">
-    </a>
-    <a href="diptych1.jpg" data-lightbox="diptych" data-title="My caption">
-        <img src="diptych1.jpg" alt="diptych1" width="350" style="float: right;">
-    </a>
+    <div class="dippy">
+        <a href="diptych2.jpg" data-lightbox="diptych" data-title="My caption">
+            <img src="diptych2.jpg" alt="diptych2" width="350" style="float: left;">
+        </a>
+        <a href="diptych1.jpg" data-lightbox="diptych" data-title="My caption">
+            <img src="diptych1.jpg" alt="diptych1" width="350" style="float: right;">
+        </a>
+    </div>
 </div>
+
 <div class="textblock">
     <p> Title and description </p>
 </div>
