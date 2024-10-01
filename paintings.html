@@ -35,10 +35,13 @@
             max-width: 800px;
             margin: 20px auto;
             padding: 20px;
-            background: #bca553;
+            background: #b0eefe;
             font-family: 'Times New Roman', Times, serif;
             font-weight: 200;
             text-align: 200;
+        }
+        .textform {
+            display:block;
         }
         h1, h2 {
             color: #333;
@@ -64,14 +67,17 @@
     <p> Title and description </p>
 </div>
 
+
 <div class="container">
-    <a href="diptych1.jpg" data-lightbox="diptych" data-title="My caption">
-        <img src="diptych1.jpg" alt="diptych1" width="350" style="float: right; margin-right:10px;">
-    </a>
     <a href="diptych2.jpg" data-lightbox="diptych" data-title="My caption">
-        <img src="diptych2.jpg" alt="diptych1" width="350" style="float: left;">
+        <img src="diptych2.jpg" alt="diptych2" width="350" style="float: left; margin-right:10px;">
     </a>
-    <p> Title and description </p>
+    <a href="diptych1.jpg" data-lightbox="diptych" data-title="My caption">
+        <img src="diptych1.jpg" alt="diptych1" width="350" style="float: right;">
+    </a>
+    <div class="textform">
+        <p> Title and description</p>
+    </div>
 </div>
 
 <script src="js/lightbox-plus-jquery.js"></script>
