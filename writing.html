@@ -11,6 +11,8 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            justify-content: center;
+            align-items: center;
         }
         header {
             background: #ffffff;
@@ -38,9 +40,40 @@
         h1, h2 {
             color: #333;
         }
-        footer {
-            text-align: center;
-            margin: 20px 0;
+        .slideshow-container {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .slides {
+            display: none;
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
         }
     </style>
 </head>
@@ -55,25 +88,51 @@
     </nav>
 </header>
 
-<div class="container">
-    <section id="paintings">
-        <h2>Contact</h2>
-        <ul>
-            <li>
-                <h3>Project Title 1</h3>
-                <p>A brief description of your project. Include technologies used and your role.</p>
-            </li>
-            <li>
-                <h3>Project Title 2</h3>
-                <p>A brief description of your project. Include technologies used and your role.</p>
-            </li>
-            <li>
-                <h3>Project Title 3</h3>
-                <p>A brief description of your project. Include technologies used and your role.</p>
-            </li>
-        </ul>
-    </section>
+<div class="slideshow-container">
+    <div class="slides">
+        <img src="https://via.placeholder.com/600x400?text=Slide+1" alt="Slide 1">
+    </div>
+    <div class="slides">
+        <img src="https://via.placeholder.com/600x400?text=Slide+2" alt="Slide 2">
+    </div>
+    <div class="slides">
+        <img src="https://via.placeholder.com/600x400?text=Slide+3" alt="Slide 3">
+    </div>
+    
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
 </div>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        let slides = document.getElementsByClassName("slides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex - 1].style.display = "block";  
+        setTimeout(showSlides, 3000); // Change image every 3 seconds
+    }
+
+    function changeSlide(n) {
+        slideIndex += n;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        if (slideIndex < 1) {slideIndex = slides.length}
+        showSlidesManually();
+    }
+
+    function showSlidesManually() {
+        let slides = document.getElementsByClassName("slides");
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slides[slideIndex - 1].style.display = "block";  
+    }
+</script>
 
 <footer>
     <p>&copy; 2024 Your Name. All rights reserved.</p>
