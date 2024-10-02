@@ -491,7 +491,7 @@
       } else {
         $caption.html(this.album[this.currentImageIndex].title);
       }
-      $caption.fadeIn('fast');
+      $caption.fadeIn('slow');
     }
 
     if (this.album.length > 1 && this.options.showImageNumberLabel) {
