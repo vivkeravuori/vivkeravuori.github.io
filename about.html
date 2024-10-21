@@ -6,11 +6,8 @@
     <title>Your Name - Projects</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
             background-color: #f4f4f4;
-            color: #333;
+            
         }
         header {
             background: #ffffff;
@@ -28,18 +25,16 @@
             text-decoration: none;
         }
         .container {
-            max-width: 400px;
-            margin-left: 50;
-            padding: 20px;
+            display: flex;
             background: #fff;
         }
+        .abouttext {
+            flex : 1;
+            background: red;
+
+        }
         .img {
-            position: absolute;
-            margin-left: 400px;
-            margin-top: 200px;
-            color: #000000;
-            font-family: 'Times New Roman', Times, serif;
-            text-decoration: none;
+            margin-right: 20px;
 
         }
         h1, h2 {
@@ -63,15 +58,15 @@
 </header>
 
 <div class="container">
-    <section id="paintings">
+    <div class="abouttext"
         <h2>About</h2>
         <p>Vivien completed her BA in 2024 from Washington University in St. Louis, where she studied Comparative Arts, Fine Arts, and Computer Science. Vivien’s work focuses on list-making and collecting as the basis of an artistic and literary practice. She is specifically interested in abstracted landscapes, where her loose and gestural marks realize landscape through arrangement rather than object, thus forming unique languages. Vivien’s work involves simultaneous practices of painting and writing, seeking to form and understand systems of grammar as tools of world building, forming complex landscapes through processes of accumulation and visual translation.</p>
-    </section>
-</div>
+    </div>
+    <div class="img">
+        <img src="treez.jpg" alt="leaves" width="400" class="img">
+    </div>
+</div>    
 
-<div class="img">
-    <img src="treez.jpg" alt="leaves" width="400" class="img">
-</div>
 
 
 </body>
