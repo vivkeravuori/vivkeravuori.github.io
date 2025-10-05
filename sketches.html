@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="css/lightbox.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivien Keravuori - Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <style>
+        body {
+            font-family: "Nanum Myeongjo", serif;
+            font-weight: 400;
+            font-style: normal;
+            margin: 0;
+            padding: 0;
+            background-color: #ffffff;
+            color: #333;
+            justify-content: center;
+            align-items: center;
+        }
+        header {
+            background: #ffffff;
+            color: #fff;
+            padding: 10px 0;
+            text-align: right;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            margin: 0 15px;
+            color: #000000;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 800px;
+            max-height: 3000px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff;
+            text-align: center;
+        }
+        .dippy {
+            display: flex;
+            justify-content: space-around;
+        }
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="index.html">Vivien Keravuori</a>
+        <a href="about.html">About</a>
+        <a href="paintings.html">Paintings</a>
+        <a href="writing.html">Writing</a>
+        <a href="sketches.html">Sketches</a>
+    </nav>
+</header>
+
+
+<div class="container">
+    <a href="crayonsketch.jpeg" data-lightbox="crayon" data-title="Yellow Sketch 1">
+        <img src="crayonsketch.jpeg" alt="dark" width="600" class="center">
+    </a>
+</div>
+
+<div class="container">
+    <a href="panelsketch.jpeg" data-lightbox="panel" data-title="Yellow Sketch 2">
+        <img src="panelsketch.jpeg" alt="yellow" width="600" class="center">
+    </a>
+</div>
+
+<div class="container">
+    <a href="sketchy.jpeg" data-lightbox="sketchy" data-title="Yellow Sketch 3">
+        <img src="sketchy.jpeg" alt="painting1" width="600" class="center">
+    </a>
+</div>
+
+
+<script src="js/lightbox-plus-jquery.js"></script>
+</body>
+</html>
